@@ -186,10 +186,9 @@ function toggleMusic(){
   if(music.paused){music.play();musicBtn.innerText="Pause Our Song ⏸️";}  
   else{music.pause();musicBtn.innerText="Click me to play our song 🎵";}  
 }  
-const randomQuestions = ["Call me, I’m just waiting here ❤️","Should we talk on WhatsApp or Messenger? 💌","I’m sitting here thinking of you 😢","Where shall we go for a walk? 🌸","Do you want pizza tonight? 🍕","I miss you so much, come closer 😔","I can’t wait to hear your voice 📞","Shall we watch our favorite movie together? 🎬","Do you want to meet under the stars? ✨","Every moment with you is precious 💖";}
-function yes(){answer.innerHTML=randomQuestions[Math.floor(Math.random()*randomQuestions.length)];}
+function yes(){answer.innerHTML="Our story deserves another chance ❤️";}  
 const randomQuestions = ["I’m sorry… maybe another time 😢","It’s okay, I understand 💔","Please forgive me, I didn’t mean to upset you 😔","Don’t be sad, it will be fine 🌧️","I hope you’ll smile again soon 😊","I know it’s hard… stay strong 💖","It’s okay, I forgive you, please don’t worry 💌","Take care… I’m here if you need me 💛","It’s not your fault… I understand 😔"];  
-function no(){answer.innerHTML=randomQuestions[Math.floor(Math.random()*randomQuestions.length)];}
+function no(){answer.innerHTML=randomQuestions[Math.floor(Math.random()*randomQuestions.length)];}  
 const faders=document.querySelectorAll(".fade");  
 window.addEventListener("scroll",()=>{faders.forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-100){el.classList.add("show");}})});  
 </script>  </body>  
