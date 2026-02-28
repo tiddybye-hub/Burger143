@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For my burger</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
-body{background:black;color:white;overflow-x:hidden;}
-/* HERO */
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>For my burger</title>  
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">  
+<style>  
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}  
+body{background:black;color:white;overflow-x:hidden;}  /* HERO */
 .hero{height:100vh;width:100vw;background:url('https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772262774565-019ca317-268a-7d5f-8219-2598004320bd.png') center/cover no-repeat;
 display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;}
 .hero::before{content:"";position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.6);}
 .nav{position:absolute;top:20px;width:100%;display:flex;justify-content:space-between;padding:0 15px;z-index:2;}
-.logo{
-    color:#ff4d88;
-    font-size:28px;
-    font-weight:bold;
-    font-family:'Dancing Script', cursive; /* Signature font */
-    letter-spacing:1px;
-}
+.logo{color:#ff4d88;font-size:24px;font-weight:bold;}
 .menu a{color:white;margin-left:15px;text-decoration:none;opacity:0.8;font-size:14px;}
 .menu a:hover{color:#ff4d88;}
 .hero-center{text-align:center;z-index:2;padding:0 15px;display:flex;flex-direction:column;align-items:center;}
@@ -28,12 +20,14 @@ display:flex;flex-direction:column;align-items:center;justify-content:center;pos
 .hero-center p{opacity:0.9;font-size:13px;margin-bottom:15px;}
 .buttons{margin-top:15px; display:flex; gap:8px; flex-wrap:wrap; justify-content:center;}
 .buttons button{padding:8px 20px;border:none;border-radius:25px;font-size:13px;cursor:pointer;}
-.btn1{background:#ff4d88;color:white;} 
+.btn1{background:#ff4d88;color:white;}
 .btn2{background:transparent;color:white;border:1px solid white;}
+
 /* MUSIC PLAYER */
 .music-wrapper{margin:15px 0; display:flex; justify-content:center;}
 .music-control{background:transparent;color:white;padding:10px 20px;border-radius:25px;cursor:pointer;font-size:14px;display:flex;align-items:center;gap:8px;transition:0.3s; border:1px solid #ff4d88;}
 .music-control:hover{background:rgba(255,77,136,0.2);}
+
 /* SECTION */
 .section{padding:40px 15px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;}
 .glass{background:rgba(255,255,255,0.05);padding:15px;border-radius:20px;backdrop-filter:blur(10px);}
@@ -42,21 +36,25 @@ display:flex;flex-direction:column;align-items:center;justify-content:center;pos
 .frame .text {max-width:100%;text-align:center;color:#fff;}
 .frame .text h2 {font-weight:700;font-size:22px;color:#ff4d88;margin-bottom:6px;}
 .frame .text p {font-weight:300;font-size:16px;opacity:0.95;}
+
 /* POLL */
 .poll{text-align:center;padding:40px 15px;}
 .poll button{background:#ff4d88;color:white;padding:8px 20px;border:none;border-radius:25px;margin:5px;cursor:pointer;font-size:13px;}
 #answer{margin-top:12px;font-size:16px;}
+
 /* FADE */
 .fade{opacity:0;transform:translateY(20px);transition:0.8s;}
 .fade.show{opacity:1;transform:translateY(0);}
+
 /* SCROLL */
 .scroll-down{position:absolute;bottom:15px;left:50%;transform:translateX(-50%);text-align:center;animation:floatArrow 2s infinite;cursor:pointer;}
 .scroll-down span{font-size:12px;opacity:0.8;} .arrow{font-size:22px;color:#ff4d88;}
 @keyframes floatArrow{0%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}100%{transform:translate(-50%,0)}}
+
 /* RESPONSIVE */
 @media(max-width:768px){
 .hero-center h1{font-size:26px;} .hero-center p{font-size:13px;}
-.buttons button{font-size:12px;padding:8px 18px;} 
+.buttons button{font-size:12px;padding:8px 18px;}
 .section{padding:30px 10px;}
 .frame img{max-width:100%;}
 .frame .text h2{font-size:20px;}
@@ -64,140 +62,115 @@ display:flex;flex-direction:column;align-items:center;justify-content:center;pos
 .music-control{padding:6px 12px;font-size:12px;}
 }
 </style>
-</head>
-<body>
-<!-- HERO -->
-<section class="hero">
-<div class="nav">
-  <div class="logo">For my burger</div>
-  <div class="menu">
-    <a href="#">Home</a><a href="#memory1">Memories</a><a href="#poll">Forever</a>
-  </div>
-</div>
-<div class="hero-center">
-  <h3 class="top-text">Nothing is impossible in this world, we just have to keep trying ❤️</h3>
-  <h1>Afra Ibnath, this is for you...</h1>
-  <p>From Salman, with a heart that still loves you.</p>
-  <div class="buttons">
-    <button class="btn1" onclick="scrollToMemory1()">Our Memories</button>
-    <button class="btn2">My Heart</button>
-  </div>
-  <!-- MUSIC BUTTON BELOW BUTTONS -->
-  <div class="music-wrapper">
-    <div class="music-control" onclick="toggleMusic()">Click me to play our song 🎵</div>
-  </div>
-</div>
-<div class="scroll-down"><span>Scroll Down</span><div class="arrow">↓</div></div>
-</section>
-<!-- BACKGROUND MUSIC -->
-<audio id="bgMusic" loop>
-  <source src="https://raw.githubusercontent.com/tiddybye-hub/Audio/main/obak.m4a" type="audio/mp4">
-</audio>
-<!-- MEMORY SECTIONS (14) -->
-<section id="memory1" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270489806-019ca38c-ec96-7d95-be4d-04216e04178d.jpeg">
-    <div class="text"><h2>The Beginning</h2><p>That moment changed everything. It became the most beautiful part of my life.</p></div>
-  </div>
-</section>
-<section id="memory2" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772269594407-019ca37f-5fe0-794a-bc36-7cdceaa725cb.jpeg">
-    <div class="text"><h2>Your Words Were Real</h2><p>You said you loved me. I still believe in that love.</p></div>
-  </div>
-</section>
-<section id="memory3" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772269659685-019ca380-7572-78c4-9f3f-3eeb43000cf0.jpeg">
-    <div class="text"><h2>My Love Still Exists</h2><p>No matter what happened, my love never disappeared.</p></div>
-  </div>
-</section>
-<section id="memory4" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772269753672-019ca381-5a47-756f-b16d-b2fe01f02b84.jpeg">
-    <div class="text"><h2>Mistakes Make Us Learn</h2><p>Through mistakes, I have learned just like you, Afra. I have corrected myself and changed a lot. I am sorry for everything, please don’t misunderstand me, Afra!</p></div>
-  </div>
-</section>
-<section id="memory5" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772269843648-019ca382-fe81-7e6e-b73d-5401953c8cb9.jpeg">
-    <div class="text"><h2>Love Survives All Obstacles</h2><p>Even through anger and fights, love remains strong. Together, we are unstoppable.</p></div>
-  </div>
-</section>
-<section id="memory6" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270071956-019ca386-8d7e-7641-a031-48334fa3caee.jpeg">
-    <div class="text"><h2>Your Smile Guides Me</h2><p>Every time I see your smile, my heart finds courage and hope. You are my light.</p></div>
-  </div>
-</section>
-<section id="memory7" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270151127-019ca387-c4f2-70f3-97aa-73ef4b7c2f42.jpeg">
-    <div class="text"><h2>Every Moment Counts</h2><p>Each memory with you is precious. They shape my world and fill it with happiness.</p></div>
-  </div>
-</section>
-<section id="memory8" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270237672-019ca389-19ba-7b26-83d5-bd7941851764.jpeg">
-    <div class="text"><h2>Brave Together</h2><p>Your love gives me strength. With you, I feel I can face anything and everything.</p></div>
-  </div>
-</section>
-<section id="memory9" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270302819-019ca38a-1932-7b35-b9d4-986074342d94.jpeg">
-    <div class="text"><h2>Forever in My Heart</h2><p>No matter where life takes us, my heart belongs to you. Always, forever.</p></div>
-  </div>
-</section>
-<section id="memory10" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772269514543-019ca37e-0401-7f80-b113-5830f3586183.jpeg">
-    <div class="text"><h2>My Inspiration, My Love</h2><p>Your presence inspires me daily. You make me braver, happier, and more alive.</p></div>
-  </div>
-</section>
-<section id="memory11" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270568671-019ca38e-386b-7db5-94fc-cb003a7af7ed.jpeg">
-    <div class="text"><h2>Our Story</h2><p>Our relationship is not a miracle; it was written long ago. Otherwise, I would have never met you. In these 6 years, many have tried to flirt with you, but no one succeeded. I did, I won you.</p></div>
-  </div>
-</section>
-<section id="memory12" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270646867-019ca38f-5c34-73d2-b505-e0d4379305b8.jpeg">
-    <div class="text"><h2>Memories We Cherish</h2><p>Every smile, every laugh, every moment with you is engraved in my heart forever.</p></div>
-  </div>
-</section>
-<section id="memory13" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772271032299-019ca395-38a3-7e71-9c30-19c7fcc8769f.jpeg">
-    <div class="text"><h2>Together Always</h2><p>No distance, no time, can lessen the bond we share. My love is yours, always.</p></div>
-  </div>
-</section>
-<section id="memory14" class="section glass fade">
-  <div class="frame">
-    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772271114729-019ca396-84d6-797c-844a-14260d1e2dfd.jpeg">
-    <div class="text"><h2>Forever Us</h2><p>Through ups and downs, fights and laughter, I will always choose you. My heart is yours forever.</p></div>
-  </div>
-</section>
-<!-- POLL -->
-<section id="poll" class="poll fade">
-<h2>Want to share a laugh with me?🙂🙏</h2>
-<button onclick="yes()">Yes</button>
-<button onclick="no()">No</button>
-<p id="answer"></p>
-</section>
-<script>
-function scrollToMemory1(){document.getElementById('memory1').scrollIntoView({behavior:'smooth'});}
-const music=document.getElementById('bgMusic');
-const musicBtn=document.querySelector('.music-control');
-function toggleMusic(){
-  if(music.paused){music.play();musicBtn.innerText="Pause Our Song ⏸️";}
-  else{music.pause();musicBtn.innerText="Click me to play our song 🎵";}
-}
-function yes(){answer.innerHTML="Our story deserves another chance ❤️";}
-const randomQuestions = ["Can I take you for ice cream? 🍦","Will you forgive my silly mistakes? 😅","Promise to hug me now? 🤗","Can we go stargazing? ✨","Do you still smile thinking of me? 😊","May I write you a song? 🎶","Will you watch a movie with me? 🍿","Can I steal a kiss? 😘","Do you want to dance with me? 💃","Shall we travel together? 🌍"];
-function no(){answer.innerHTML=randomQuestions[Math.floor(Math.random()*randomQuestions.length)];}
-const faders=document.querySelectorAll(".fade");
-window.addEventListener("scroll",()=>{faders.forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-100){el.classList.add("show");}})});
-</script>
-</body>
+
+</head>  
+<body>  <!-- HERO -->  <section class="hero">  
+<div class="nav">  
+  <div class="logo">For my burger</div>  
+  <div class="menu">  
+    <a href="#">Home</a><a href="#memory1">Memories</a><a href="#poll">Forever</a>  
+  </div>  
+</div>  <div class="hero-center">  
+  <h3 class="top-text">Nothing is impossible in this world, we just have to keep trying ❤️</h3>  
+  <h1>Afra Ibnath, this is for you...</h1>  
+  <p>From Salman, with a heart that still loves you.</p>    <div class="buttons">  
+    <button class="btn1" onclick="scrollToMemory1()">Our Memories</button>  
+    <button class="btn2">My Heart</button>  
+  </div>    <!-- MUSIC BUTTON BELOW BUTTONS -->    <div class="music-wrapper">  
+    <div class="music-control" onclick="toggleMusic()">Click me to play our song 🎵</div>  
+  </div>  
+</div>  <div class="scroll-down"><span>Scroll Down</span><div class="arrow">↓</div></div>  
+</section>  <!-- BACKGROUND MUSIC -->  <audio id="bgMusic" loop>  
+  <source src="https://raw.githubusercontent.com/tiddybye-hub/Audio/main/obak.m4a" type="audio/mp4">  
+</audio>  <!-- MEMORY SECTIONS (14) -->  <section id="memory1" class="section glass fade">  
+  <div class="frame">  
+    <!-- Swapped image -->  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270489806-019ca38c-ec96-7d95-be4d-04216e04178d.jpeg">  
+    <div class="text"><h2>The Beginning</h2><p>That moment changed everything. It became the most beautiful part of my life.</p></div>  
+  </div>  
+</section>  <section id="memory2" class="section glass fade">  
+  <div class="frame">  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772269594407-019ca37f-5fe0-794a-bc36-7cdceaa725cb.jpeg">  
+    <div class="text"><h2>Your Words Were Real</h2><p>You said you loved me. I still believe in that love.</p></div>  
+  </div>  
+</section>  <section id="memory3" class="section glass fade">  
+  <div class="frame">  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772269659685-019ca380-7572-78c4-9f3f-3eeb43000cf0.jpeg">  
+    <div class="text"><h2>My Love Still Exists</h2><p>No matter what happened, my love never disappeared.</p></div>  
+  </div>  
+</section>  <section id="memory4" class="section glass fade">  
+  <div class="frame">  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772269753672-019ca381-5a47-756f-b16d-b2fe01f02b84.jpeg">  
+    <div class="text"><h2>Mistakes Make Us Learn</h2><p>Through mistakes, I have learned just like you, Afra. I have corrected myself and changed a lot. I am sorry for everything, please don’t misunderstand me, Afra!</p></div>  
+  </div>  
+</section>  <section id="memory5" class="section glass fade">  
+  <div class="frame">  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772269843648-019ca382-fe81-7e6e-b73d-5401953c8cb9.jpeg">  
+    <div class="text"><h2>Love Survives All Obstacles</h2><p>Even through anger and fights, love remains strong. Together, we are unstoppable.</p></div>  
+  </div>  
+</section>  <section id="memory6" class="section glass fade">  
+  <div class="frame">  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270071956-019ca386-8d7e-7641-a031-48334fa3caee.jpeg">  
+    <div class="text"><h2>Your Smile Guides Me</h2><p>Every time I see your smile, my heart finds courage and hope. You are my light.</p></div>  
+  </div>  
+</section>  <section id="memory7" class="section glass fade">  
+  <div class="frame">  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270151127-019ca387-c4f2-70f3-97aa-73ef4b7c2f42.jpeg">  
+    <div class="text"><h2>Every Moment Counts</h2><p>Each memory with you is precious. They shape my world and fill it with happiness.</p></div>  
+  </div>  
+</section>  <section id="memory8" class="section glass fade">  
+  <div class="frame">  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270237672-019ca389-19ba-7b26-83d5-bd7941851764.jpeg">  
+    <div class="text"><h2>Brave Together</h2><p>Your love gives me strength. With you, I feel I can face anything and everything.</p></div>  
+  </div>  
+</section>  <section id="memory9" class="section glass fade">  
+  <div class="frame">  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270302819-019ca38a-1932-7b35-b9d4-986074342d94.jpeg">  
+    <div class="text"><h2>Forever in My Heart</h2><p>No matter where life takes us, my heart belongs to you. Always, forever.</p></div>  
+  </div>  
+</section>  <section id="memory10" class="section glass fade">  
+  <div class="frame">  
+    <!-- Swapped image -->  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772269514543-019ca37e-0401-7f80-b113-5830f3586183.jpeg">  
+    <div class="text"><h2>My Inspiration, My Love</h2><p>Your presence inspires me daily. You make me braver, happier, and more alive.</p></div>  
+  </div>  
+</section>  <section id="memory11" class="section glass fade">  
+  <div class="frame">  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270568671-019ca38e-386b-7db5-94fc-cb003a7af7ed.jpeg">  
+    <div class="text"><h2>Our Story</h2><p>Our relationship is not a miracle; it was written long ago. Otherwise, I would have never met you. In these 6 years, many have tried to flirt with you, but no one succeeded. I did, I won you.</p></div>  
+  </div>  
+</section>  <section id="memory12" class="section glass fade">  
+  <div class="frame">  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772270646867-019ca38f-5c34-73d2-b505-e0d4379305b8.jpeg">  
+    <div class="text"><h2>Memories We Cherish</h2><p>Every smile, every laugh, every moment with you is engraved in my heart forever.</p></div>  
+  </div>  
+</section>  <section id="memory13" class="section glass fade">  
+  <div class="frame">  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772271032299-019ca395-38a3-7e71-9c30-19c7fcc8769f.jpeg">  
+    <div class="text"><h2>Together Always</h2><p>No distance, no time, can lessen the bond we share. My love is yours, always.</p></div>  
+  </div>  
+</section>  <section id="memory14" class="section glass fade">  
+  <div class="frame">  
+    <img src="https://raw.githubusercontent.com/tiddybye-hub/Ghhh/1daeac4999d5586b5fbebc70e27286b1d884e2e4/1772271114729-019ca396-84d6-797c-844a-14260d1e2dfd.jpeg">  
+    <div class="text"><h2>Forever Us</h2><p>Through ups and downs, fights and laughter, I will always choose you. My heart is yours forever.</p></div>  
+  </div>  
+</section>  <!-- POLL -->  <section id="poll" class="poll fade">  
+<h2>Can We Try Again?</h2>  
+<button onclick="yes()">Yes</button>  
+<button onclick="no()">No</button>  
+<p id="answer"></p>  
+</section>  <script>  
+function scrollToMemory1(){document.getElementById('memory1').scrollIntoView({behavior:'smooth'});}  
+const music=document.getElementById('bgMusic');  
+const musicBtn=document.querySelector('.music-control');  
+function toggleMusic(){  
+  if(music.paused){music.play();musicBtn.innerText="Pause Our Song ⏸️";}  
+  else{music.pause();musicBtn.innerText="Click me to play our song 🎵";}  
+}  
+function yes(){answer.innerHTML="Our story deserves another chance ❤️";}  
+const randomQuestions = ["Can I take you for ice cream? 🍦","Will you forgive my silly mistakes? 😅","Promise to hug me now? 🤗","Can we go stargazing? ✨","Do you still smile thinking of me? 😊","May I write you a song? 🎶","Will you watch a movie with me? 🍿","Can I steal a kiss? 😘","Do you want to dance with me? 💃","Shall we travel together? 🌍"];  
+function no(){answer.innerHTML=randomQuestions[Math.floor(Math.random()*randomQuestions.length)];}  
+const faders=document.querySelectorAll(".fade");  
+window.addEventListener("scroll",()=>{faders.forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-100){el.classList.add("show");}})});  
+</script>  </body>  
 </html>
